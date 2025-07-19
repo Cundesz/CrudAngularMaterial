@@ -1,0 +1,50 @@
+<div fxLayout="row" fxLayoutAlign="center center">
+    <div fxLayour="column" fxFlex="900px">
+        <form class="mt-60" #clintesFrm="ngForm">
+            <mat-card>
+                <mat-card-header>
+                    <mat-card-title>Register informations</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="mt-20">
+                    <div fxLayout="row" fxLayout="center" fxLayoutGap="16px">
+                        <div fxLayour="column" fxFlex="800px">
+                            <mat-form-field class="full-width">
+                                <mat-label>Name: *</mat-label>
+                                <input type="text" name="name" placeholder="Enter your name" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayout="center" fxLayoutGap="16px">
+                        <div fxLayour="column" fxFlex="800px">
+                            <mat-form-field class="full-width">
+                                <mat-label>Email: *</mat-label>
+                                <input type="email" name="name" placeholder="Enter your email" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayout="center" fxLayoutGap="16px">
+                        <div fxLayour="column" fxFlex="400px">
+                            <mat-form-field class="full-width">
+                                <mat-label>CPF: *</mat-label>
+                                <input type="text" name="name" placeholder="Enter your CPF" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                    <div fxLayout="row" fxLayout="center" fxLayoutGap="16px">
+                        <div fxLayour="column" fxFlex="400px">
+                            <mat-form-field class="full-width">
+                                <mat-label>Birth date: *</mat-label>
+                                <input type="date" name="name" placeholder="Enter your name" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary" class="ml-5"><mat-icon fontIcon="save"></mat-icon>Save</button>
+                    <button mat-flat-button color="primary" class="ml-5"><mat-icon fontIcon="refresh"></mat-icon>Refresh</button>
+                    <button mat-flat-button color="accent" class="ml-5"><mat-icon fontIcon="backspace"></mat-icon>Clear</button>
+                </mat-card-actions>
+            </mat-card>
+        </form>
+    </div>
+</div>
