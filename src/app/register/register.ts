@@ -6,6 +6,9 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
+import { User } from './user';
+import { UserServices } from '../user-services';
+
 
 @Component({
   selector: 'app-register',
@@ -14,5 +17,12 @@ import { MatButtonModule } from '@angular/material/button';
   styleUrl: './register.scss'
 })
 export class Register {
+    user: User = User.newUser();
 
+    constructor(private service: UserServices) {}
+
+    saveUser() {
+        this.service.Save(this.user);
+        console.log('User saved:', this.user);
+    }
 }

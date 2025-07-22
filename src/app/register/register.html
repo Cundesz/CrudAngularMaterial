@@ -1,6 +1,6 @@
 <div fxLayout="row" fxLayoutAlign="center center">
     <div fxLayour="column" fxFlex="900px">
-        <form class="mt-60" #clintesFrm="ngForm">
+        <form class="mt-60" #clintesFrm="ngForm" (ngSubmit)="saveUser()">
             <mat-card>
                 <mat-card-header>
                     <mat-card-title>Register informations</mat-card-title>
@@ -10,7 +10,7 @@
                         <div fxLayour="column" fxFlex="800px">
                             <mat-form-field class="full-width">
                                 <mat-label>Name: *</mat-label>
-                                <input type="text" name="name" placeholder="Enter your name" matInput>
+                                <input type="text" name="name" placeholder="Enter your name" matInput [(ngModel)]="user.name">
                             </mat-form-field>
                         </div>
                     </div>
@@ -18,7 +18,7 @@
                         <div fxLayour="column" fxFlex="800px">
                             <mat-form-field class="full-width">
                                 <mat-label>Email: *</mat-label>
-                                <input type="email" name="name" placeholder="Enter your email" matInput>
+                                <input type="email" name="email" placeholder="Enter your email" matInput [(ngModel)]="user.email">
                             </mat-form-field>
                         </div>
                     </div>
@@ -26,7 +26,7 @@
                         <div fxLayour="column" fxFlex="400px">
                             <mat-form-field class="full-width">
                                 <mat-label>CPF: *</mat-label>
-                                <input type="text" name="name" placeholder="Enter your CPF" matInput>
+                                <input type="text" name="cpf" placeholder="Enter your CPF" matInput [(ngModel)]="user.cpf">
                             </mat-form-field>
                         </div>
                     </div>
@@ -34,15 +34,15 @@
                         <div fxLayour="column" fxFlex="400px">
                             <mat-form-field class="full-width">
                                 <mat-label>Birth date: *</mat-label>
-                                <input type="date" name="name" placeholder="Enter your name" matInput>
+                                <input type="date" name="birthDate" matInput [(ngModel)]="user.birthDate">
                             </mat-form-field>
                         </div>
                     </div>
                 </mat-card-content>
                 <mat-card-actions>
-                    <button mat-flat-button color="primary" class="ml-5"><mat-icon fontIcon="save"></mat-icon>Save</button>
+                    <button mat-flat-button color="primary" class="ml-5" type="submit"><mat-icon fontIcon="save"></mat-icon>Save</button>
                     <button mat-flat-button color="primary" class="ml-5"><mat-icon fontIcon="refresh"></mat-icon>Refresh</button>
-                    <button mat-flat-button color="accent" class="ml-5"><mat-icon fontIcon="backspace"></mat-icon>Clear</button>
+                    <button mat-flat-button color="accent" class="ml-5" type="reset"><mat-icon fontIcon="backspace"></mat-icon>Clear</button>
                 </mat-card-actions>
             </mat-card>
         </form>
