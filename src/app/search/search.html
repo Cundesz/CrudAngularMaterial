@@ -1,1 +1,26 @@
-<p>search works!</p>
+<div fxLayout="row" fxLayoutAlign="center center">
+    <div fxLayout="column" fxFlex="1000px">
+        <form class="mt-60" #searchFrm="ngForm">
+            <mat-card appearance="outlined">
+                <mat-card-header>
+                    <mat-card-title>Search user</mat-card-title>
+                </mat-card-header>
+                <mat-card-content class="mt-20">
+                    <div fxLayout="row">
+                        <div fxLayout="column" fxFlex="800px">
+                            <mat-form-field class="full-width">
+                                <mat-label>Name to search: *</mat-label>
+                                <input type="text" name="searchName" placeholder="Enter name to search" matInput>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </mat-card-content>
+                <mat-card-actions>
+                    <button mat-flat-button color="primary" class="ml-5" type="submit"><mat-icon fontIcon="search"></mat-icon>Search</button>
+                    <button mat-flat-button color="accent" class="ml-5" type="reset"><mat-icon fontIcon="backspace"></mat-icon>Clear</button>
+                </mat-card-actions>
+            </mat-card>
+        </form>
+
+    </div>
+</div>

@@ -12,9 +12,6 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './app.scss'
 })
 export class App {
-  onClick() {
-    console.log('Button clicked!');
-  }
 
 
 }
